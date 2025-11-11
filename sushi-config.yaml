@@ -21,9 +21,9 @@ publisher:
   email: pher@lists.HL7.org
 extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-    valueCode: trial-use
+    valueCode: informative
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
-    valueInteger: 1
+    valueInteger: 2
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg
     valueCode: pher
 # The dependencies property corresponds to IG.dependsOn. The key is the

@@ -1,4 +1,4 @@
-# Patient Identification
+### Patient Identification
 
 The first step in a FHIR-based query exchange is identifying the individual in the queried FHIR server. A high-confidence match between the Client and Server is essential to ensure accurate data retrieval for the correct patient. The outcome of this step is that both systems share the logical ID of the FHIR resource (Patient.id), which is crucial for constructing public health agency queries. This document does not specify the patient data to use for matching or the required confidence level before retrieving clinical data; implementers must define these based on workflow and local policies.
 

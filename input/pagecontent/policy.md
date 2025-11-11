@@ -1,8 +1,8 @@
-# Data Governance
+### Data Governance
 
 Data governance for public health FHIR Query and Response is essential to ensure responsible management, access, and exchange of protected health information. It establishes clear policies and procedures for data quality, security, privacy, and interoperability across participating entities. In the context of FHIR-based public health reporting, data governance defines who can query or respond to clinical data requests, the conditions for doing so, and the standards for data validation. A key element of this governance is the use of Data Use Agreements (DUAs) or Participation Agreements (such as New York’s SCPA), which outline the specific terms under which data may be shared between providers and Public Health Agencies, including permitted uses and security protocols. These agreements ensure compliance with regulations such as HIPAA, clarify roles and responsibilities among partners, and foster trust by safeguarding patient privacy while enabling accurate, timely, and actionable data sharing to enhance public health surveillance and response efforts.
 
-# Legally Appropriate Access
+### Legally Appropriate Access
 
 TEFCA encourages, but does not require, providers to respond to queries. Healthcare providers need information about the requestor to determine whether to respond to a public health agency query. In some jurisdictions, providers may have legal obligations to respond to certain public health authorities while being prohibited from responding to others. Existing regulations, workflows, and data-sharing agreements should guide public health authorities in selecting which provider organizations to query for data.
 
