@@ -2,54 +2,6 @@
 // This file can be renamed, and additional FSH files can be added.
 // SUSHI will look for definitions in any file using the .fsh ending.
 
-// Instance:		NBSExampleScenario
-// InstanceOf: 	ExampleScenario
-// Description: 	"Newborn Screening Query & Response Example"
-// Usage: 			#example
-// * version = "1.0.0"
-// * name = "Newborn Screening - Bedside Screening"
-// * status = #active "Active"
-// * publisher = "Helios FHIR Accelerator"
-// * purpose = "This ExampleScenario describes the workflow to exchange of early hearing detection and intervention (EHDI) and critical congenital heart disease (CCHD) results from EHRs to public health agency systems."
-// * actor[0].actorId = "PublicHealthProgram"
-// * actor[0].type = #entity
-// * actor[0].name = "Public Health Newborn Screening Program (EHDI/CCHD)"
-// * actor[0].description = "The Public Health Newborn Screening Program receives, and where appropriate, acts on the bedside screening results gathered by a healthcare provider at the bedside for early hearing detection and intervention (EHDI) and/or critical congenital heart disease (CCHD) screening results."
-// * actor[1].actorId = "HealthcareOrganization"
-// * actor[1].type = #entity
-// * actor[1].name = "Healthcare Organization Conducing Bedside Newborn Screening (EHDI/CCHD)"
-// * actor[1].description = "The healthcare organization performs and records the outcome of bedside screening results for early hearing detection and intervention (EHDI) and/or critical congenital heart disease (CCHD) for reporting to the appropriate Public Health Agency."
-// * actor[2].actorId = "Intermediary"
-// * actor[2].type = #entity
-// * actor[2].name = "Network or Intermediary Facilitating Data Exchange"
-// * actor[2].description = "An optional interoperability partner facilitating the exchange of bedside screening results for early hearing detection and intervention (EHDI) and/or critical congenital heart disease (CCHD) between a healthcare organization and an appropriate Public Health Agency."
-// * instance[0].resourceId = "InfantPatientRecord"
-// * instance[0].resourceType = #Patient
-// * instance[0].name = "Infant Patient Record"
-// * instance[0].description = "The FHIR Patient resource representing the infant for whom bedside screening results are being sought."
-// * instance[1].resourceId = "ScreeningObservationRecord"
-// * instance[1].resourceType = #Observation
-// * instance[1].name = "Infant Bedside Screening Result Record"
-// * instance[1].description = "The FHIR Observation resource containing a result value related to either early hearing detection and intervention (EHDI) or critical congenital heart disease (CCHD)."
-// * process[0].title = "FHIR RESTful Query"
-// * process[0].description = "The process of generating  a FHIR RESTful API query to retrieve bedside screening results and consumption of the returned results."
-// * process[0].preConditions = "The Public Health Newvborn Screening Program must be aware of the existance of the infant and positively identify the infant in the Healthcare Organization's FHIR server."
-// * process[0].postConditions = "The Public Health Newborn Screening Program will have integrated any returned bedside screening results and made the data available to end users to support program activities."
-// * process[0].step[0].operation[0].number = "1"
-// * process[0].step[0].operation[0].type = "FHIR RESTful Query"
-// * process[0].step[0].operation[0].name = "FHIR RESTful Query for Bedside Screening Results"
-// * process[0].step[0].operation[0].initiator = "PublicHealthProgram"
-// * process[0].step[0].operation[0].receiver = "HealthcareOrganization"
-// * process[0].step[0].operation[0].request.resourceId = "InfantPatientRecord"
-// * process[0].step[0].operation[0].description = "The Public Health Newvborn Screening Program generates a FHIR RESTful API query to retrieve bedside screening results for a known infant."
-// * process[0].step[1].operation[0].number = "2"
-// * process[0].step[1].operation[0].type = "FHIR RESTful Response"
-// * process[0].step[1].operation[0].name = "FHIR RESTful Response Returning Bedside Screening Results"
-// * process[0].step[1].operation[0].initiator = "HealthcareOrganization"
-// * process[0].step[1].operation[0].receiver = "PublicHealthProgram"
-// * process[0].step[1].operation[0].request.resourceId = "ScreeningObservationRecord"
-// * process[0].step[1].operation[0].description = "The Healthcare Organization returns a FHIR RESTful API response containing bedside screening results for the appropriate infant."
-
 
 
 Instance:		phQueryExampleScenarioDirect
@@ -64,51 +16,51 @@ Usage: 			#example
 * actor[0].actorId = "PublicHealthAgency"
 * actor[0].type = #entity
 * actor[0].name = "Public Health Agency (PHA)"
-* actor[0].description = "The Public Health Agency holds the authority to access appropriate data to support program directives and services."
+* actor[0].description = "The Public Health Agency that holds the authority to access appropriate data to support program activities, goals, and services."
 * actor[1].actorId = "HealthcareOrganization"
 * actor[1].type = #entity
 * actor[1].name = "Healthcare Organization (HCO)"
-* actor[1].description = "Healthcare organizations perform critical roles in collecting and sharing clinical and administrative data critical to public health program activities and goals."
+* actor[1].description = "The Healthcare organization is a critical element in collecting and exchanging clinical and administrative data that are essential for local PHA programs."
 * instance[0].resourceId = "patientQuery"
 * instance[0].resourceType = #Binary
 * instance[0].name = "Query for Patient Record"
-* instance[0].description = "The PHA shares patient demographics to identify the appropriate individual of interest in the HCO."
+* instance[0].description = "The PHA shares patient demographics as a Patient search or $match operation to identify the individual of interest."
 * instance[1].resourceId = "patientQueryResponse"
 * instance[1].resourceType = #Bundle
 * instance[1].name = "Response to Query for Patient Record"
-* instance[1].description = "Based on patient demographics provided, the HCO returns one or more corresponding Patient resources."
+* instance[1].description = "Based on the patient demographics provided, the HCO returns one or more corresponding Patient resources."
 * instance[2].resourceId = "clinicalQuery"
 * instance[2].resourceType = #Binary
 * instance[2].name = "Query for Clinical Data"
-* instance[2].description = "The PHA request additional data related to the identified Patient resource. The exact nature of the query and data requested will vary based on the use case being fulfilled. PHAs only request data for which they have clear authority to access."
+* instance[2].description = "The PHA request additional data related to the identified Patient resource. The exact nature of the query and data requested will vary based on the use case being fulfilled. PHAs only request data that they have clear authority to access."
 * instance[3].resourceId = "clinicalQueryResponse"
 * instance[3].resourceType = #Bundle
 * instance[3].name = "Response to Query for Clinical Data"
-* instance[3].description = "The HCO returns appropriate data in response to the PHA query for additional information."
+* instance[3].description = "The HCO returns appropriate FHIR-formatted data in response to the PHA query."
 * process[0].title = "Patient Identification Query"
-* process[0].description = "The process of generating  a FHIR RESTful API query to identify the individual of interest in a external system which may contain additional data required by the PHA."
-* process[0].preConditions = "The Public Health Agency must be aware of the existance of the individual and have sufficient demographics to positively identify the individual in the Healthcare Organization's FHIR server."
-* process[0].postConditions = "The Public Health Agency will have validated and integrated any returned data and made the data available for additional queries."
+* process[0].description = "The process of generating  a FHIR RESTful API query to identify the individual of interest in an external system which may contain additional authorized data required by the PHA to support program activities."
+* process[0].preConditions = "The PHA must be aware of the existance of the individual and have sufficient demographics to positively identify the individual on the HCO's FHIR server."
+* process[0].postConditions = "The PHA will have validated any returned resouces and made the data available for additional queries if appropriate."
 * process[0].step[0].operation[0].number = "1"
-* process[0].step[0].operation[0].type = "Patient Identification Query"
+* process[0].step[0].operation[0].type = "RESTful Query"
 * process[0].step[0].operation[0].name = "Patient Identification Query"
 * process[0].step[0].operation[0].initiator = "PublicHealthAgency"
 * process[0].step[0].operation[0].receiver = "HealthcareOrganization"
 * process[0].step[0].operation[0].request.resourceId = "patientQuery"
 * process[0].step[0].operation[0].response.resourceId = "patientQueryResponse"
-* process[0].step[0].operation[0].description = "The Public Health Agency generates a FHIR RESTful API query containing patient demographics to identify the appropriate Patient resource on the FHIR Server."
+* process[0].step[0].operation[0].description = "The PHA generates a FHIR RESTful API query containing patient demographics to identify the appropriate Patient resource on the HCO's FHIR Server."
 * process[1].title = "Additional Data Query"
-* process[1].description = "The process of generating  one or more FHIR RESTful API queries to retrieve additional data necessary to carry out public health objectives and/or provide services."
-* process[1].preConditions = "The Public Health Agency must have identified a single Patient record corresponding to the individual of interest via the Patient Identiification Query process."
-* process[1].postConditions = "The Public Health Agency will have integrated any returned data and made the data available to end users to support program activities."
+* process[1].description = "The process of generating  one or more FHIR RESTful API queries to retrieve additional data necessary to carry out public health activities and/or provide services."
+* process[1].preConditions = "The PHA must have identified a single Patient record corresponding to the individual of interest via the Patient Identiification Query process."
+* process[1].postConditions = "The PHA will have validated any returned resources and made the data available to end users to support program activities."
 * process[1].step[0].operation[0].number = "2"
-* process[1].step[0].operation[0].type = "Clinical Data Query"
+* process[1].step[0].operation[0].type = "RESTful Query"
 * process[1].step[0].operation[0].name = "Clinical Data Query"
 * process[1].step[0].operation[0].initiator = "PublicHealthAgency"
 * process[1].step[0].operation[0].receiver = "HealthcareOrganization"
 * process[1].step[0].operation[0].request.resourceId = "clinicalQuery"
 * process[1].step[0].operation[0].response.resourceId = "clinicalQueryResponse"
-* process[1].step[0].operation[0].description = "Using the identified Patient resource, the Public Health Agency formulates one or more use case specific FHIR RESTful API queries to collect additional relevant data."
+* process[1].step[0].operation[0].description = "Using the identified Patient resource, the PHA formulates one or more use case specific FHIR RESTful API queries to collect additional relevant data."
 
 
 
@@ -217,3 +169,53 @@ Usage: 			#example
 * process[1].step[2].operation[0].receiver = "PublicHealthAgency"
 * process[1].step[2].operation[0].request.resourceId = "clinicalQueryResponse1"
 * process[1].step[2].operation[0].description = "The Intermediary returns the FHIR resource(s) provided by the HCO back to the PHA."
+
+
+// OBSOLETE
+// Instance:		NBSExampleScenario
+// InstanceOf: 	ExampleScenario
+// Description: 	"Newborn Screening Query & Response Example"
+// Usage: 			#example
+// * version = "1.0.0"
+// * name = "Newborn Screening - Bedside Screening"
+// * status = #active "Active"
+// * publisher = "Helios FHIR Accelerator"
+// * purpose = "This ExampleScenario describes the workflow to exchange of early hearing detection and intervention (EHDI) and critical congenital heart disease (CCHD) results from EHRs to public health agency systems."
+// * actor[0].actorId = "PublicHealthProgram"
+// * actor[0].type = #entity
+// * actor[0].name = "Public Health Newborn Screening Program (EHDI/CCHD)"
+// * actor[0].description = "The Public Health Newborn Screening Program receives, and where appropriate, acts on the bedside screening results gathered by a healthcare provider at the bedside for early hearing detection and intervention (EHDI) and/or critical congenital heart disease (CCHD) screening results."
+// * actor[1].actorId = "HealthcareOrganization"
+// * actor[1].type = #entity
+// * actor[1].name = "Healthcare Organization Conducing Bedside Newborn Screening (EHDI/CCHD)"
+// * actor[1].description = "The healthcare organization performs and records the outcome of bedside screening results for early hearing detection and intervention (EHDI) and/or critical congenital heart disease (CCHD) for reporting to the appropriate Public Health Agency."
+// * actor[2].actorId = "Intermediary"
+// * actor[2].type = #entity
+// * actor[2].name = "Network or Intermediary Facilitating Data Exchange"
+// * actor[2].description = "An optional interoperability partner facilitating the exchange of bedside screening results for early hearing detection and intervention (EHDI) and/or critical congenital heart disease (CCHD) between a healthcare organization and an appropriate Public Health Agency."
+// * instance[0].resourceId = "InfantPatientRecord"
+// * instance[0].resourceType = #Patient
+// * instance[0].name = "Infant Patient Record"
+// * instance[0].description = "The FHIR Patient resource representing the infant for whom bedside screening results are being sought."
+// * instance[1].resourceId = "ScreeningObservationRecord"
+// * instance[1].resourceType = #Observation
+// * instance[1].name = "Infant Bedside Screening Result Record"
+// * instance[1].description = "The FHIR Observation resource containing a result value related to either early hearing detection and intervention (EHDI) or critical congenital heart disease (CCHD)."
+// * process[0].title = "FHIR RESTful Query"
+// * process[0].description = "The process of generating  a FHIR RESTful API query to retrieve bedside screening results and consumption of the returned results."
+// * process[0].preConditions = "The Public Health Newvborn Screening Program must be aware of the existance of the infant and positively identify the infant in the Healthcare Organization's FHIR server."
+// * process[0].postConditions = "The Public Health Newborn Screening Program will have integrated any returned bedside screening results and made the data available to end users to support program activities."
+// * process[0].step[0].operation[0].number = "1"
+// * process[0].step[0].operation[0].type = "FHIR RESTful Query"
+// * process[0].step[0].operation[0].name = "FHIR RESTful Query for Bedside Screening Results"
+// * process[0].step[0].operation[0].initiator = "PublicHealthProgram"
+// * process[0].step[0].operation[0].receiver = "HealthcareOrganization"
+// * process[0].step[0].operation[0].request.resourceId = "InfantPatientRecord"
+// * process[0].step[0].operation[0].description = "The Public Health Newvborn Screening Program generates a FHIR RESTful API query to retrieve bedside screening results for a known infant."
+// * process[0].step[1].operation[0].number = "2"
+// * process[0].step[1].operation[0].type = "FHIR RESTful Response"
+// * process[0].step[1].operation[0].name = "FHIR RESTful Response Returning Bedside Screening Results"
+// * process[0].step[1].operation[0].initiator = "HealthcareOrganization"
+// * process[0].step[1].operation[0].receiver = "PublicHealthProgram"
+// * process[0].step[1].operation[0].request.resourceId = "ScreeningObservationRecord"
+// * process[0].step[1].operation[0].description = "The Healthcare Organization returns a FHIR RESTful API response containing bedside screening results for the appropriate infant."
