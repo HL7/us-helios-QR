@@ -79,7 +79,7 @@ Usage: 			#example
 * actor[0].description = "The Public Health Agency that holds the authority to access appropriate data to support program activities, goals, and services."
 * actor[1].actorId = "Intermediary"
 * actor[1].type = #entity
-* actor[1].name = "Network or Intermediary"
+* actor[1].name = "Network/Intermediary"
 * actor[1].description = "An interoperability partner that facilitates the exchange data between the PHA and the HCO."
 * actor[2].actorId = "HealthcareOrganization"
 * actor[2].type = #entity
