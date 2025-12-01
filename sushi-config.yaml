@@ -3,10 +3,10 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: hl7.fhir.us.us-helios-QR
-canonical: http://hl7.org/fhir/us/us-helios-QR
+id: hl7.fhir.us.ph-query
+canonical: http://hl7.org/fhir/us/ph-query
 name: HeliosQueryAndResponseWhitePaper
-title: Helios Query and Response White Paper
+title: Query & Response for Public Health
 description: White paper describing the application of FHIR query and reponse to public health use cases
 status: draft # draft | active | retired | unknown
 version: 0.1.0
