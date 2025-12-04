@@ -60,14 +60,12 @@ pages:
     title: Actor Roles
   technical.md:
     title: Technical Considerations
-  query.md:
-    title: Query Construction
   query_patientid.md:
     title: Query Patient Identification
   query_patterns.md:
     title: Query Patterns
   query_attributes.md:
-    title: Query Attributes
+    title: Query Implementation
   testing.md:
     title: Testing and Piloting
   usecases.md:
@@ -116,10 +114,9 @@ menu:
   Actor Roles: roles.html
   Technical Considerations: technical.html
   Query Considerations:
-    Construction: query.html
     Patients: query_patientid.html
     Patterns: query_patterns.html
-    Attributes: query_attributes.html
+    Implementation: query_attributes.html
   Testing: testing.html
   Use Cases:
     Use Case Examples: usecases.html
