@@ -20,6 +20,12 @@ By leveraging existing FHIR API capabilities, public health agency programs can:
 
 With the growing emphasis on health data interoperability and regulatory support for standardized exchange mechanisms, FHIR-based querying is poised to become a cornerstone of efficient and scalable public health data access. Investing in this approach fosters collaboration across healthcare entities, optimizes resource allocation, and enhances public health agencies' ability to safeguard community health.
 
+### Contributers
+
+![Helios Logo](Helios-logo.jpg){:style="float: right; width:200px;margin-right:35px; display: block;"}
+
+This document is produced by the [Helios FHIR Accelerator](https://confluence.hl7.org/display/PH/Helios+FHIR+Accelerator+for+Public+Health+Home) for Public Health [Query & Response Priority Area](https://confluence.hl7.org/spaces/PH/pages/216238674/Query+Response). This group of volunteers examined potential uses of RESTful API queries to understand the approaches data exchange partners may adopt and to identify considerations for implementers. We thank all of the Priority Area participants for their engagement and contributions. Although this document is developed for the US context, it may be relevant to other regions as well.
+
 # Dependencies
 {% lang-fragment dependency-table-nontech.xhtml %}
 
