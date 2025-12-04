@@ -49,7 +49,7 @@ Develop processes and functionality to work with the data source organization to
 - Implement functionality and workflows to address ambiguous patient look up outcomes before proceeding with subsequent queries.
 - Implement functionality and workflows to enable end users or public health agency systems to utilize the returned data effectively.
 
-**Authorized User Organizations**
+**Data Providers**
 
 Develop processes and functionality to work with the public health agency program to:
 - Implement any necessary data use agreements for exchanging data via FHIR queries, which may include data governance agreements.

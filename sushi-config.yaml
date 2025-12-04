@@ -55,13 +55,13 @@ pages:
   policy.md:
     title: Policy Considerations
   exchange_considerations.md:
-    title: Exchange Considerations
+    title: Data Exchange
   roles.md:
     title: Actor Roles
   technical.md:
     title: Technical Considerations
   query_patientid.md:
-    title: Query Patient Identification
+    title: Patient Identification
   query_patterns.md:
     title: Query Patterns
   query_attributes.md:
@@ -110,7 +110,7 @@ pages:
 menu:
   Home: index.html
   Policy: policy.html
-  Exchange Considerations: exchange_considerations.html
+  Data Exchange: exchange_considerations.html
   Actor Roles: roles.html
   Technical Considerations: technical.html
   Query Considerations:

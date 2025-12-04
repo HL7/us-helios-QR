@@ -39,12 +39,9 @@ In addition to the audit and logging requirements defined in the [HIPAA Security
 
 The current state of Public Health data exchange relies on three different models of authorization: 
 
-1.	**Backend system trust** 
-A PHA may establish FHIR connectivity with the State HIE that receives data from member healthcare organizations. A data use agreement, signed by the PHA, HIE, and its members allows the PHA to retrieve data without requiring individual user authentication. This approach simplifies connectivity as compared to connecting to each member organization directly. 
+1.	**Backend system trust**: A PHA may establish FHIR connectivity with the State HIE that receives data from member healthcare organizations. A data use agreement, signed by the PHA, HIE, and its members allows the PHA to retrieve data without requiring individual user authentication. This approach simplifies connectivity as compared to connecting to each member organization directly. 
 
-2.	**Patient-authorized data exchange (Individual Access Use Case)** 
-Patients can initiate data sharing by authenticating themselves with a state portal and querying for their data. This is useful for preparing International Patient Summaries and consolidating immunization records but is less useful for case investigation. 
+2.	**Patient-authorized data exchange (Individual Access Use Case)**:Patients can initiate data sharing by authenticating themselves with a state portal and querying for their data. This is useful for preparing International Patient Summaries and consolidating immunization records but is less useful for case investigation. 
 
-3.	**Case Investigator log in to an intermediary, such as an HIE, or directly into an EHR (including SMART on FHIR)**  
-Case Investigators may be granted individual logins to access EHRs, web portals hosted by HIEs, or other online data repositories, however this approach is heavily manual and can be time consuming.
+3.	**Case Investigator log in to an intermediary, such as an HIE, or directly into an EHR (including SMART on FHIR)**: Case Investigators may be granted individual logins to access EHRs, web portals hosted by HIEs, or other online data repositories, however this approach is heavily manual and can be time consuming.
 
