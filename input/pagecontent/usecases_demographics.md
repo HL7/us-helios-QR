@@ -13,3 +13,18 @@ Any system likely to be a reliable and accurate source of demographics data may 
 ### Benefits
 
 Accurate and up-to-date demographics, including contact information, makes it easier for public health agency programs to contact individuals for treatment and services purposes. Demographic elements such as race and ethnicity, address and age also play a significant role in public health data analysis to support allocation of resources. Certain data elements, such as occupation, can also support personalized care such as occupation related immunization recommendations. 
+
+### Triggering Event
+
+Many events may trigger a FHIR query for supplemental demographics including:
+-	Receipt of data, such as an ELR message, which is lacking important data elements
+-	Initiation of activities to contact the individual to offer services and support
+-	Initiation of data analytics which rely on complete and accurate demographics
+
+### Query Content
+
+Supplemental demographics are largely contained within the Patient resource, although additional resource types such as RelatedPerson or Observation (for data elements such as occupation) may also be relevant. The contents of the USCDI Patient Demographics/Information data class are likely to be directly relevant to public health data exchange activity.
+
+## Data Usage
+
+Complete and accurate patient demographics underlie a wide variety of public health agency activities including provision of support and services, data analytics, resource allocation and planning and reporting. Demographics are critical to virtually all public health agency programs that deal with identifiable data.
