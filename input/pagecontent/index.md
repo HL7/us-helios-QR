@@ -19,3 +19,9 @@ By leveraging existing FHIR API capabilities, public health agency programs can:
 -  **Strengthen Public Health Outcomes**: Improve disease surveillance, follow-up care, and outbreak response through seamless, timely data access.
 
 With the growing emphasis on health data interoperability and regulatory support for standardized exchange mechanisms, FHIR-based querying is poised to become a cornerstone of efficient and scalable public health data access. Investing in this approach fosters collaboration across healthcare entities, optimizes resource allocation, and enhances public health agencies' ability to safeguard community health.
+
+# Dependencies
+{% lang-fragment dependency-table-nontech.xhtml %}
+
+# IP Statements
+{% lang-fragment ip-statements.xhtml %}

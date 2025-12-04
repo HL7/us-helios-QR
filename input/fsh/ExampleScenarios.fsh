@@ -6,10 +6,11 @@
 
 Instance:		phQueryExampleScenarioDirect
 InstanceOf: 	ExampleScenario
-Description: 	"Public Health Query & Response Example Without an Intermediary"
+Title: 	        "Public Health Query & Response Example Without an Intermediary"
+Description:    "ExampleScenario instance illustrating how a public health system can directly connect with a data source using FHIR RESTful API queries."
 Usage: 			#example
 * version = "1.0.0"
-* name = "Public Health Query and Response Example Without an Intermediary"
+* name = "QueryWithoutIntermediary"
 * status = #active "Active"
 * publisher = "Helios FHIR Accelerator"
 * purpose = "This ExampleScenario describes the generic workflow to apply the FHIR RESTful API query & response paradigm to public health use cases. Potential use cases include case investigation, newborn screening and cancer reporting among others."
@@ -66,10 +67,11 @@ Usage: 			#example
 
 Instance:		phQueryExampleScenario
 InstanceOf: 	ExampleScenario
-Description: 	"Public Health Query & Response Example With an Intermediary"
+Title: 	        "Public Health Query & Response Example With an Intermediary"
+Description:    "ExampleScenario instance illustrating how a public health system can connect via an intermediary with a data source using FHIR RESTful API queries."
 Usage: 			#example
 * version = "1.0.0"
-* name = "Public Health Query and Response Example With an Intermediary"
+* name = "QueryWithIntermediary"
 * status = #active "Active"
 * publisher = "Helios FHIR Accelerator"
 * purpose = "This ExampleScenario describes the generic workflow to apply the FHIR RESTful API query & response paradigm to public health use cases. Potential use cases include case investigation, newborn screening and cancer reporting among others."
