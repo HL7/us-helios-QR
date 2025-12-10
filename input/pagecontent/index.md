@@ -26,8 +26,14 @@ With the growing emphasis on health data interoperability and regulatory support
 
 This document is produced by the [Helios FHIR Accelerator](https://confluence.hl7.org/display/PH/Helios+FHIR+Accelerator+for+Public+Health+Home) for Public Health [Query & Response Priority Area](https://confluence.hl7.org/spaces/PH/pages/216238674/Query+Response). This group of volunteers examined potential uses of RESTful API queries to understand the approaches data exchange partners may adopt and to identify considerations for implementers. We thank all of the Priority Area participants for their engagement and contributions. Although this document is developed for the US context, it may be relevant to other regions as well.
 
-# Dependencies
+### Dependencies
 {% lang-fragment dependency-table-nontech.xhtml %}
 
-# IP Statements
+### IP Statements
 {% lang-fragment ip-statements.xhtml %}
+
+### Global Profiles Table
+{% lang-fragment globals-table.xhtml %}
+
+### Cross Version Analysis
+{% lang-fragment cross-version-analysis.xhtml %}
