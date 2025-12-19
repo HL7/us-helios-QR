@@ -2,6 +2,8 @@
 
 Public health agency FHIR queries involve a two-step process once reportable data is identified in an electronic health system: (1) patient identification and matching followed by (2) a FHIR query to retrieve additional data. First, identify which responders hold data about the patient. If it is already known which organization holds the relevant data, a targeted FHIR query can be used to obtain the FHIR Patient.id. Second, perform a query for supplemental patient information needed to complete the public health agency workflow.
 
+It is understood that QHIN-to-QHIN communication uses IHE-profiled transactions, but QHINs may offer to their participants any number of query mechanisms. Existing implementation guides, such as [Mobile Access to Health Documents (MHD)](https://profiles.ihe.net/ITI/MHD/index.html), can inform the crosswalk between FHIR and IHE standards.
+
 ![Networked Connection to FHIR Responders](networked_connections.png){:style="float: none; width:900px;margin-left:35px; display: block;"}
 
 **Step 1 (TEFCA Flow): Patient Discovery Query via QHIN**
@@ -9,6 +11,8 @@ Public health agency FHIR queries involve a two-step process once reportable dat
 As part of a case investigation use case, a public health agency investigator uses demographic information from an initial Electronic Case Report (eICR), Electronic Lab Report (ELR), or other notification system to compose a Patient Discovery Query. Submitting this Query to the QHIN triggers an ITI-55 Cross Community Patient Discovery Request. Some QHINs support alternative patient search methods, offering Record Locator Services, Master Patient Indexes, or other mechanisms to support patient discovery.
 
 The response to this query includes both the patient identifiers and the Home Community IDs (HCIDs) of the organizations who were able to match the provided demographics. The QHIN’s role is to facilitate connectivity to the FHIR endpoints registered for those HCIDs.
+
+Note: Within TEFCA there is a limitation where only one FHIR endpoint can be represented within an HCID.  The guidance in this section is based on that restriction.  As facilitated FHIR is being deployed and expanded, this limitation must be addressed to recognize that FHIR endpoints and HCID reflect different data sets and scopes that do not necessarily have a 1:1 relationship.  As this limitation is addressed by TEFCA the guidance in this document will adjust further to fully enable FHIR based exchange that is not limited to the scope of document exchange.
 
 **Step 1 (Alternate Flow): FHIR Patient Match at a Single Organization**
 
