@@ -16,7 +16,9 @@ Another effective strategy is to query resources by category rather than individ
 - Procedure
 - ServiceRequest
 
-Although some FHIR servers support retrieving large amounts of data with a single operation, such as $export or [$everything](https://hl7.org/fhir/patient-operation-everything.html), this approach is likely to retrieve more data than is required for Case Investigation on a single patient. Population Health and Epidemiological use cases may consider the [Bulk Data](https://hl7.org/fhir/uv/bulkdata/export.html) approach, which has its own [Helios Bulk Data Priority Area](https://confluence.hl7.org/spaces/PH/pages/204276822/Bulk+Data).
+Although some FHIR servers support retrieving large amounts of data with a single operation, such as $export or [$everything](https://hl7.org/fhir/patient-operation-everything.html), this approach is likely to retrieve more data than is required for Case Investigation on a single patient. Population Health and Epidemiological use cases may consider the [Bulk Data](https://hl7.org/fhir/uv/bulkdata/export.html) approach, which has its own [Helios Bulk Data Priority Area](https://confluence.hl7.org/spaces/PH/pages/204276822/Bulk+Data). Note that the use of bulk data should be volume driven as not all population health and epidemiological use cases have volume to warrant the use of the bulk data approach.
+
+An alternative approach is the use of a [task-based query](https://hl7.org/fhir/us/davinci-cdex/task-based-approach.html) as described in the Da Vinci Clinical Data Exchange (CDex) FHIR Implementation Guide. 
 
 ### Query Frequency
 

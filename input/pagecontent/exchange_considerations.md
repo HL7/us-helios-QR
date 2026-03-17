@@ -29,7 +29,7 @@ Query and Response is the most powerful exchange pattern for satisfying the data
 
 Available resources and workforce capacity should also be taken into account. It is important to explore available tools and workforce education opportunities that may be supported by other public health agencies. 
 
-The [Data Modernization Implementation Center](https://www.cdcfoundation.org/TEFCA-IC) program provides funding to drive public health data modernization. Three implementation centers (CRISP Shared Services; Guidehouse; Mathematica) provide support to state, local, and territorial jurisdictions. Chickasaw Health Consulting serves as the Data Modernization Implementation Center supporting Tribes and Tribal-serving organizations.
+The [Data Modernization Implementation Center](https://www.cdcfoundation.org/TEFCA-IC) program provides funding to drive public health data modernization. Three implementation centers (CRISP Shared Services; Guidehouse; Mathematica) provide support to state, local, and territorial jurisdictions. Chickasaw Health Consulting serves as the Data Modernization Implementation Center supporting Tribes and Tribal-serving organizations. (disclaimer – these links may change over time, but are appropriate and effective at the time of this publication)
 
 Public Health Agencies who are not already engaged with an Implementation Center can visit the [PHIG Partners webside](https://www.phinfrastructure.org/opportunities/)
 
