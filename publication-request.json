@@ -2,7 +2,7 @@
   "package-id" : "hl7.fhir.us.ph-query",
   "version" : "1.0.0",
   "path" : "http://hl7.org/fhir/us/ph-query/INFORMATIVE1",
-  "mode" : "working",
+  "mode" : "milestone",
   "status" : "informative",
   "sequence" : "Informative 1",
   "desc" : "A white paper published by the Helios FHIR Accelerator on the application of FHIR APIs to public health use cases.",
