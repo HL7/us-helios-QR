@@ -1,0 +1,15 @@
+{
+  "package-id" : "hl7.fhir.us.ph-query",
+  "version" : "1.0.0",
+  "path" : "http://hl7.org/fhir/us/ph-query",
+  "mode" : "working",
+  "status" : "informative",
+  "sequence" : "Informative 1",
+  "desc" : "A white paper published by the Helios FHIR Accelerator on the application of FHIR APIs to public health use cases.",
+  "changes" : "change.html",
+  "first" : true,
+  "title" : "Query & Response for Public Health",
+  "ci-build" : "https://build.fhir.org/ig/HL7/us-helios-QR/en/index.html",
+  "category" : "Public Health",
+  "introduction" : "This Implementation Guide is designed to assist public health agency programs in accessing healthcare data through FHIR-based query and response methods. It outlines the application of the HL7 FHIR RESTful API in public health agency data sharing use cases, improving access to vital public health data needed for functions such as case investigation and service provision. By leveraging existing FHIR API support, authorized public health agency programs can proactively access data held by healthcare providers and other sources. FHIR query-based data exchange offers public health agencies a transformative opportunity to streamline access to health information and reduce inefficiencies in manual data retrieval."
+}
