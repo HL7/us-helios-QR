@@ -1,20 +1,32 @@
-### Minimization of Queries
+### Optimization of Queries
 
-An ideal query indicates to the EHR the exact data necessary to satisfy the case investigation or other public health agency use case. Overbroad queries increase the cost and processing time for the responding system. 
+An ideal FHIR query indicates to the responding system, as specifically as possible, the data necessary to satisfy the case investigation or other public health agency use case. Overly broad queries increase the cost and processing time for the responding system and may make the responding system less likely to provide the necessary data. Also, the authority of a public health program to access data may be limited to specific data sets and overly broad queries may return data that the program is not authorized to hold.
 
-To minimize costs and response time:
--  Constrain results to a Date Range
--  Search for resources by linked Encounters
--  Request specific resources by code
+FHIR queries can be optimized by constraining the query across one or more different axes including:
+- Constrain the query to just the resources of interest
+    - For example, if immunization data is not relevant for the use case, the query should not request Immunization resources be returned
+- Constrain the query to a specific context
+    - For example, query for data linked only to a specific relevant encounter
+- Constrain the query to specific category of data
+    - For example, with flexible resources such as Observation, broader categories like laboratory or vital signs can be used to request a range of related data in a single request
+    - Commonly used FHIR resources that contain category elements include:
+        - Condition
+        - DiagnosticReport
+        - DocumentReference
+        - MedicationRequest
+        - Observation
+        - Procedure
+        - ServiceRequest
+- Constrain the query by a specific code
+    - For example, specific vital sign types (e.g., heart rate, blood pressure) or laboratory results can be specified for retrieval
+- Constrain the query to a specific date range
+    - Date based constraints may take multiple forms including:
+        - A bounded range
+        - An open range (e.g., all data since a particular time)
+        - Only the most recent iteration of the data
+    - Date range constraints are critical for data classes that may have many instances (e.g., vital signs) or where the use case is triggered by an initial event (e.g., the diagnosis of a reportable condition)
 
-Another effective strategy is to query resources by category rather than individual codes. For instance, instead of requesting each lab test using separate LOINC codes, broader categories like laboratory or vital signs can be used to capture a wider range of related data in a single request. This method retrieves a larger, more relevant set of data in a single call. Commonly used FHIR resources that contain category elements include:
-- Condition
-- DiagnosticReport
-- DocumentReference
-- MedicationRequest
-- Observation
-- Procedure
-- ServiceRequest
+When implementing a specific use case, careful consideration of query constraints is critical to ensure that queries, and the data they return, are aligned with network policies and local regulations and policies.
 
 Although some FHIR servers support retrieving large amounts of data with a single operation, such as $export or [$everything](https://hl7.org/fhir/patient-operation-everything.html), this approach is likely to retrieve more data than is required for Case Investigation on a single patient. Population Health and Epidemiological use cases may consider the [Bulk Data](https://hl7.org/fhir/uv/bulkdata/export.html) approach, which has its own [Helios Bulk Data Priority Area](https://confluence.hl7.org/spaces/PH/pages/204276822/Bulk+Data). Note that the use of bulk data should be volume driven as not all population health and epidemiological use cases have volume to warrant the use of the bulk data approach.
 

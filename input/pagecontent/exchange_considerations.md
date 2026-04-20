@@ -11,7 +11,7 @@ Federal priorities may encompass a broader scope, including TEFCA as the framewo
 The broad adoption of TEFCA for Treatment and Payment purposes lays the groundwork for FHIR to be used for additional exchange purposes. As PHAs adopt TEFCA for data retrieval, they should also consider response use cases, ensuring the data they hold is made available:
 
 - The Individual Access Use Case grants patients the right to retrieve their own data from the TEFCA network. Some states, like [Washington](https://doh.wa.gov/sites/default/files/2025-04/820316-WADOHFHIRRoadmap.pdf), are currently in the process of adopting direct access.
-- As State PHAs adopt FHIR, they can choose to enable the exchange of data with other State’s PHAs. This is useful when investigating outbreaks, consolidating data for patients who move across state lines, and for jurisdictions that experience fluctuating or traveling populations.
+- As State PHAs adopt FHIR, they can choose to enable the exchange of data with other State’s PHAs. Data exchange agreements between public health agencies and healthcare typically define through state law or reciprocal contracts what data may be exchanged not how the data is exchanged. This is useful when investigating outbreaks, consolidating data for patients who move across state lines, and for jurisdictions that experience fluctuating or traveling populations.
 - Some states mandate reporting to State Public Health Authorities, who then delegate investigations to County Health Departments. If both jurisdictions are using FHIR, it simplifies and standardizes the exchange of data between them.
 - States often provide public dashboards with aggregated data to inform provider decision-making. With FHIR, it’s possible for Providers to incorporate this data directly into clinical workflows (e.g. Outbreak notifications and Clinical Decision Support services).
 
@@ -22,6 +22,12 @@ Data governance requirements may vary across organizations. Many organizations i
 ### Using Intermediaries
 
 Whereas previous interoperability standards such as HL7 v2 and CDA provided public health agencies with the ability to receive data “pushed” by data submitters, FHIR offers exchange patterns beyond the typical messaging or document paradigm. RESTful API queries are just one example of this. While the Query and Response exchange pattern is a powerful tool for public health agencies to replace existing inefficient and manual data collecting workflows, it is not the only option. Public Health Agencies may also work with intermediaries such as state or regional HIEs to aggregate data to support population health and similar longitudinal use cases that exceed the scope of single patient investigations.
+
+Query and Response is the most powerful exchange pattern for satisfying the data needs of Case Investigations by Public health agencies; the subject of interest is known (through an initial case report, electronic lab reporting, or other notification method), and data is held by exchange partners. This pattern complements other capabilities supported by FHIR and in some cases named in regulation.
+
+### Data Exchange Patterns
+
+Whereas previous interoperability standards such as HL7 v2 and CDA provided public health agencies with the ability to receive data “pushed” by data submitters, and in some cases respond to queries (e.g. HL7v2 immunization queries), FHIR offers exchange patterns beyond the typical messaging or document paradigm. RESTful API queries are just one example of this. While the Query and Response exchange pattern is a powerful tool for public health agencies to replace existing inefficient and manual data collecting workflows, it is not the only option. Public Health Agencies may also work with intermediaries such as state or regional HIEs to aggregate data to support population health and similar longitudinal use cases that exceed the scope of single patient investigations.
 
 Query and Response is the most powerful exchange pattern for satisfying the data needs of Case Investigations by Public health agencies; the subject of interest is known (through an initial case report, electronic lab reporting, or other notification method), and data is held by exchange partners. This pattern complements other capabilities supported by FHIR and in some cases named in regulation.
 

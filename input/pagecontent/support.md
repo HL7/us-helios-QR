@@ -1,5 +1,9 @@
 ### Federal References and Resources
 
+#### HIT-Related Federal and Certification Requirements
+
+Public health agency partners should familiarize themselves with health information technology (HIT) regulatory and certification requirements. This includes a review of the existing regulations, including (g)(10) and (g)(20) certification requirements for HIT (both Public health agency and EHR), United States Core Data for Interoperability (USCDI), and the CMS Interoperability and Prior Authorization final rules. Understanding these regulations will help to clarify the types of data likely to be accessible through FHIR API queries. Additional details can be found in the resources linked below. 
+
 **USCDI:** [United States Core Data for Interoperability (USCDI)](https://www.healthit.gov/isp/united-states-core-data-interoperability-uscdi)
 
 **USCDI+:** [United States Core Data for Interoperability (USCDI) Plus](https://uscdiplus.healthit.gov/uscdi)
