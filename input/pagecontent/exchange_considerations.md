@@ -21,12 +21,6 @@ Data governance requirements may vary across organizations. Many organizations i
 
 ### Using Intermediaries
 
-Whereas previous interoperability standards such as HL7 v2 and CDA provided public health agencies with the ability to receive data “pushed” by data submitters, FHIR offers exchange patterns beyond the typical messaging or document paradigm. RESTful API queries are just one example of this. While the Query and Response exchange pattern is a powerful tool for public health agencies to replace existing inefficient and manual data collecting workflows, it is not the only option. Public Health Agencies may also work with intermediaries such as state or regional HIEs to aggregate data to support population health and similar longitudinal use cases that exceed the scope of single patient investigations.
-
-Query and Response is the most powerful exchange pattern for satisfying the data needs of Case Investigations by Public health agencies; the subject of interest is known (through an initial case report, electronic lab reporting, or other notification method), and data is held by exchange partners. This pattern complements other capabilities supported by FHIR and in some cases named in regulation.
-
-### Data Exchange Patterns
-
 Whereas previous interoperability standards such as HL7 v2 and CDA provided public health agencies with the ability to receive data “pushed” by data submitters, and in some cases respond to queries (e.g. HL7v2 immunization queries), FHIR offers exchange patterns beyond the typical messaging or document paradigm. RESTful API queries are just one example of this. While the Query and Response exchange pattern is a powerful tool for public health agencies to replace existing inefficient and manual data collecting workflows, it is not the only option. Public Health Agencies may also work with intermediaries such as state or regional HIEs to aggregate data to support population health and similar longitudinal use cases that exceed the scope of single patient investigations.
 
 Query and Response is the most powerful exchange pattern for satisfying the data needs of Case Investigations by Public health agencies; the subject of interest is known (through an initial case report, electronic lab reporting, or other notification method), and data is held by exchange partners. This pattern complements other capabilities supported by FHIR and in some cases named in regulation.

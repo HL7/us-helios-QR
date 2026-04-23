@@ -1,6 +1,6 @@
-A FHIR client must direct a RESTful query to a specific FHIR server endpoint, which varies based on the use case and the query itself. 
+### Selecting a Query Target(s)
 
-### Common Query Patterns
+A FHIR client must direct a RESTful query to a specific FHIR server endpoint, which varies based on the use case and the query itself.
 
 #### Source System
 
