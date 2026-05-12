@@ -12,7 +12,7 @@ status: draft # draft | active | retired | unknown
 version: 1.0.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
-releaseLabel: ci-build
+releaseLabel: STU 1
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America (the)" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 jurisdiction: urn:iso:std:iso:3166#US
@@ -27,6 +27,9 @@ extension:
     valueInteger: 2
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg
     valueCode: pher
+parameters:
+  jira-code: helios-qr    
+
 # The dependencies property corresponds to IG.dependsOn. The key is the
 # package id and the value is the version (or dev/current). For advanced
 # use cases, the value can be an object with keys for id, uri, and version.
@@ -85,6 +88,8 @@ pages:
     title: Respiratory Virus Surveillance Use Case
   support.md:
     title: References and Resources
+  change.md:
+    title: Change Log
 #
 #
 # The parameters property represents IG.definition.parameter. Rather
@@ -129,6 +134,7 @@ menu:
     Respiratory Virus Surveillance Use Case: usecases_respiratory.html
   Artifacts: artifacts.html
   Support: support.html
+  Change Log: change.html
 
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
