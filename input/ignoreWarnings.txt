@@ -1,5 +1,18 @@
 == Suppressed Messages ==
 
-# Add warning and/or information messages here after you've confirmed that they aren't really a problem
-# (And include comments like this justifying why)
-# See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
+# 01: Related to ExampleScenario and the IG publisher (Ok to suppress for ballot per FMG publication review on 5/13/2026) (see https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/ExampleScenario.20errors/with/574541506)
+%The link 'node6' for "Patient Identification Query to an Intermediary" cannot be resolved%
+%The link 'node7' for "Patient Identification Query from an Intermediary" cannot be resolved%
+%The link 'node7' for "response" cannot be resolved%
+%The link 'node8' for "Patient Identification Response to a PHA" cannot be resolved%
+%The link 'node2' for "details" cannot be resolved%
+%The link 'node12' for "Clinical Data Query via an Intermediary" cannot be resolved%
+%The link 'node13' for "Clinical Data Query from an Intermediary" cannot be resolved%
+%The link 'node13' for "response" cannot be resolved%
+%The link 'node14' for "Clinical Data Response to a PHA" cannot be resolved%
+%The link 'node1' for "details" cannot be resolved%
+%The link 'node4' for "Patient Identification Query" cannot be resolved%
+%The link 'node4' for "response" cannot be resolved%
+%The link 'node2' for "details" cannot be resolved%
+%The link 'node6' for "Clinical Data Query" cannot be resolved%
+%The link 'node6' for "response" cannot be resolved%

@@ -9,7 +9,7 @@
   "changes" : "change.html",
   "first" : true,
   "title" : "Query & Response for Public Health",
-  "ci-build" : "https://build.fhir.org/ig/HL7/us-helios-QR/en/index.html",
+  "ci-build" : "https://build.fhir.org/ig/HL7/us-helios-QR",
   "category" : "Public Health",
   "introduction" : "This Implementation Guide is designed to assist public health agency programs in accessing healthcare data through FHIR-based query and response methods. It outlines the application of the HL7 FHIR RESTful API in public health agency data sharing use cases, improving access to vital public health data needed for functions such as case investigation and service provision. By leveraging existing FHIR API support, authorized public health agency programs can proactively access data held by healthcare providers and other sources. FHIR query-based data exchange offers public health agencies a transformative opportunity to streamline access to health information and reduce inefficiencies in manual data retrieval.",
   "registry-description" : "This Implementation Guide provides guidance for public health program staff, architects and technical implementers as they work with trading partners to develop, test and implement FHIR-based RESTful API solutions to enhance authorized data collection to support program directives and services. It contains a discussion of technical and policy considerations for employing FHIR APIs and outlines potential public health use cases for a query and response paradigm.",
