@@ -11,7 +11,7 @@ description: White paper describing the application of FHIR query and reponse to
 status: draft # draft | active | retired | unknown
 version: 1.0.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
-copyrightYear: 2025+
+copyrightYear: 2026+
 releaseLabel: Informative 1
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America (the)" # https://www.hl7.org/fhir/valueset-jurisdiction.html
